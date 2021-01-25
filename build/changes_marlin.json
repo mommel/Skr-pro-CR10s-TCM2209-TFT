@@ -1,0 +1,442 @@
+{
+   "files": [
+      {
+         "filename": "Configuration.h",
+         "changes":[
+            {
+               "search":"SERIAL_PORT_2",
+               "replace":"AERIAL_PORT_2"
+            },
+            {
+               "search":"#define STRING_CONFIG_H_AUTHOR",
+               "replace":"#define STRING_CONFIG_H_AUTHOR \"(Mommel)\""
+            },
+            {
+               "search":"//#define CUSTOM_MACHINE_NAME",
+               "replace":"#define CUSTOM_MACHINE_NAME \"SKR Pro CR-10s\""
+            },
+            {
+               "search":"#define SERIAL_PORT",
+               "replace":"#define SERIAL_PORT -1"
+            },
+            {
+               "search":"//#define AERIAL_PORT_2",
+               "replace":"#define SERIAL_PORT_2 1"
+            },
+            {
+               "search":"#define BAUDRATE",
+               "replace":"#define BAUDRATE 115200"
+            },
+            {
+               "search":"#define MOTHERBOARD",
+               "replace":"#define MOTHERBOARD BOARD_BTT_SKR_PRO_V1_2"
+            },
+            {
+               "search":"#define TEMP_SENSOR_0",
+               "replace":"#define TEMP_SENSOR_0 30"
+            },
+            {
+               "search":"#define TEMP_SENSOR_BED",
+               "replace":"#define TEMP_SENSOR_BED 1"
+            },
+            {
+               "search":"#define BED_MAXTEMP",
+               "replace":"#define BED_MAXTEMP      125"
+            },
+            {
+               "search":"//#define PID_EDIT_MENU",
+               "replace":"#define PID_EDIT_MENU"
+            },
+            {
+               "search":"//#define PID_AUTOTUNE_MENU",
+               "replace":"#define PID_AUTOTUNE_MENU"
+            },
+            {
+               "search":"#define DEFAULT_bedKp",
+               "replace":"#define DEFAULT_bedKp  70.13"
+            },
+            {
+               "search":"#define DEFAULT_bedKi",
+               "replace":"#define DEFAULT_bedKi  11.27"
+            },
+            {
+               "search":"#define DEFAULT_bedKd",
+               "replace":"#define DEFAULT_bedKd 290.86"
+            },
+            {
+               "search":"#define EXTRUDE_MAXLENGTH",
+               "replace":"#define EXTRUDE_MAXLENGTH 435"
+            },
+            {
+               "search":"#define X_DRIVER_TYPE",
+               "replace":"#define X_DRIVER_TYPE  TMC2209"
+            },
+            {
+               "search":"#define Y_DRIVER_TYPE",
+               "replace":"#define Y_DRIVER_TYPE  TMC2209"
+            },
+            {
+               "search":"#define Z_DRIVER_TYPE",
+               "replace":"#define Z_DRIVER_TYPE  TMC2209"
+            },
+            {
+               "search":"#define DEFAULT_AXIS_STEPS_PER_UNIT",
+               "replace":"#define DEFAULT_AXIS_STEPS_PER_UNIT    {160, 160, 800, 186}   // 1/32 stepping "
+            },
+            {
+               "search":"#define DEFAULT_MAX_FEEDRATE",
+               "replace":"#define DEFAULT_MAX_FEEDRATE          { 2500, 2500, 100, 25 }"
+            },
+            {
+               "search":"#define DEFAULT_MAX_ACCELERATION",
+               "replace":"#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 5000 }"
+            },
+            {
+               "search":"#define DEFAULT_ACCELERATION",
+               "replace":"#define DEFAULT_ACCELERATION           600"
+            },
+            {
+               "search":"#define DEFAULT_RETRACT_ACCELERATION",
+               "replace":"#define DEFAULT_RETRACT_ACCELERATION  1000"
+            },
+            {
+               "search":"#define DEFAULT_TRAVEL_ACCELERATION",
+               "replace":"#define DEFAULT_TRAVEL_ACCELERATION    800"
+            },
+            {
+               "search":"#define DEFAULT_ZJERK",
+               "replace":"#define DEFAULT_ZJERK  0.4"
+            },
+            {
+               "search":"#define JUNCTION_DEVIATION_MM",
+               "replace":"#define JUNCTION_DEVIATION_MM 0.067"
+            },
+            {
+               "search":"//#define BLTOUCH",
+               "replace":"#define BLTOUCH"
+            },
+            {
+               "search":"#define Z_PROBE_SPEED_FAST",
+               "replace":"#define Z_PROBE_SPEED_FAST (8*60)"
+            },
+            {
+               "search":"#define INVERT_X_DIR",
+               "replace":"#define INVERT_X_DIR true"
+            },
+            {
+               "search":"#define INVERT_E0_DIR",
+               "replace":"#define INVERT_E0_DIR true"
+            },
+            {
+               "search":"#define X_BED_SIZE",
+               "replace":"#define X_BED_SIZE 296 // Nozzle is at X4 when homed"
+            },
+            {
+               "search":"#define Y_BED_SIZE",
+               "replace":"#define Y_BED_SIZE 298 // Nozzle is at Y2 when homed"
+            },
+            {
+               "search":"#define X_MIN_POS",
+               "replace":"#define X_MIN_POS 4"
+            },
+            {
+               "search":"#define Y_MIN_POS",
+               "replace":"#define Y_MIN_POS 2"
+            },
+            {
+               "search":"#define X_MAX_POS",
+               "replace":"#define X_MAX_POS 319 // 15mm Extra space on the right end"
+            },
+            {
+               "search":"#define Y_MAX_POS",
+               "replace":"#define Y_MAX_POS 306 // 4mm Extra space behind the bed"
+            },
+            {
+               "search":"#define Z_MAX_POS",
+               "replace":"#define Z_MAX_POS 400"
+            },
+            {
+               "search":"//#define AUTO_BED_LEVELING_BILINEAR",
+               "replace":"#define AUTO_BED_LEVELING_BILINEAR"
+            },
+            {
+               "search":"//#define G26_MESH_VALIDATION",
+               "replace":"#define G26_MESH_VALIDATION   // Enable G26 mesh validation"
+            },
+            {
+               "search":"//#define LCD_BED_LEVELING",
+               "replace":"#define LCD_BED_LEVELING"
+            },
+            {
+               "search":"//#define MESH_EDIT_MENU",
+               "replace":"#define MESH_EDIT_MENU"
+            },
+            {
+               "search":"//#define LEVEL_BED_CORNERS",
+               "replace":"#define LEVEL_BED_CORNERS"
+            },
+            {
+               "search":"//#define Z_SAFE_HOMING",
+               "replace":"#define Z_SAFE_HOMING"
+            },
+            {
+               "search":"#define Z_SAFE_HOMING_X_POINT",
+               "replace":"#define Z_SAFE_HOMING_X_POINT 150"
+            },
+            {
+               "search":"#define Z_SAFE_HOMING_Y_POINT",
+               "replace":"#define Z_SAFE_HOMING_Y_POINT 150"
+            },
+            {
+               "search":"#define HOMING_FEEDRATE_MM_M",
+               "replace":"#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (8*60) }"
+            },
+            {
+               "search":"//#define EEPROM_SETTINGS ",
+               "replace":"#define EEPROM_SETTINGS"
+            },
+            {
+               "search":"//#define EEPROM_AUTO_INIT ",
+               "replace":"#define EEPROM_AUTO_INIT"
+            },
+            {
+               "search":"#define PREHEAT_1_TEMP_HOTEND",
+               "replace":"#define PREHEAT_1_TEMP_HOTEND 185"
+            },
+            {
+               "search":"#define PREHEAT_1_TEMP_BED",
+               "replace":"#define PREHEAT_1_TEMP_BED     45"
+            },
+            {
+               "search":"#define PREHEAT_1_FAN_SPEED ",
+               "replace":"#define PREHEAT_1_FAN_SPEED   255"
+            },
+            {
+               "search":"#define PREHEAT_2_FAN_SPEED",
+               "replace":"#define PREHEAT_2_FAN_SPEED   255"
+            },
+            {
+               "search":"//#define NOZZLE_PARK_FEATURE",
+               "replace":"#define NOZZLE_PARK_FEATURE"
+            },
+            {
+               "search":"#define LCD_LANGUAGE",
+               "replace":"#define LCD_LANGUAGE de"
+            },
+            {
+               "search":"#define DISPLAY_CHARSET_HD44780",
+               "replace":"#define DISPLAY_CHARSET_HD44780 WESTERN"
+            },
+            {
+               "search":"//#define SDSUPPORT",
+               "replace":"#define SDSUPPORT"
+            },
+            {
+               "search":"//#define INDIVIDUAL_AXIS_HOMING_MENU",
+               "replace":"#define INDIVIDUAL_AXIS_HOMING_MENU"
+            },
+            {
+               "search":"//#define SPEAKER",
+               "replace":"#define SPEAKER"
+            },
+            {
+               "search":"//#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER",
+               "replace":"#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER"
+            }
+         ]
+      },
+      {
+         "filename": "Configuration_adv.h",
+         "changes":[
+         {
+            "search":"#define E0_AUTO_FAN_PIN",
+            "replace":"#define E0_AUTO_FAN_PIN PE5"
+         },
+         {
+            "search":"//#define BLTOUCH_SET_5V_MODE",
+            "replace":"//#define BLTOUCH_SET_5V_MODE"
+         },
+         {
+            "search":"#define Z_STEPPER_ALIGN_ITERATIONS",
+            "replace":"#define Z_STEPPER_ALIGN_ITERATIONS 3"
+         },
+         {
+            "search":"#define TRAMMING_POINT_XY",
+            "replace":"#define TRAMMING_POINT_XY { {  20, 20 }, { 280,  20 }, { 280, 280 }, { 20, 280 } }"
+         },
+         {
+            "search":"//#define LCD_INFO_MENU",
+            "replace":"#define LCD_INFO_MENU"
+         },
+         {
+            "search":"//#define STATUS_MESSAGE_SCROLLING",
+            "replace":"#define STATUS_MESSAGE_SCROLLING"
+         },
+         {
+            "search":"#define EVENT_GCODE_SD_ABORT",
+            "replace":"#define EVENT_GCODE_SD_ABORT \"G27\""
+         },
+         {
+            "search":"//#define SDCARD_SORT_ALPHA",
+            "replace":"#define SDCARD_SORT_ALPHA"
+         },
+         {
+            "search":"#define SDSORT_USES_RAM",
+            "replace":"#define SDSORT_USES_RAM    true"
+         },
+         {
+            "search":"#define SDSORT_USES_STACK",
+            "replace":"#define SDSORT_USES_STACK  true"
+         },
+         {
+            "search":"//#define SCROLL_LONG_FILENAMES",
+            "replace":"#define SCROLL_LONG_FILENAMES"
+         },
+         {
+            "search":"//#define DOGM_SD_PERCENT",
+            "replace":"#define DOGM_SD_PERCENT"
+         },
+         {
+            "search":"//#define BABYSTEPPING",
+            "replace":"#define BABYSTEPPING"
+         },
+         {
+            "search":"#define BABYSTEP_MULTIPLICATOR_Z",
+            "replace":"#define BABYSTEP_MULTIPLICATOR_Z  5"
+         },
+         {
+            "search":"#define BABYSTEP_MULTIPLICATOR_XY",
+            "replace":"#define BABYSTEP_MULTIPLICATOR_XY  5"
+         },
+         {
+            "search":"//#define DOUBLECLICK_FOR_Z_BABYSTEPPING",
+            "replace":"#define DOUBLECLICK_FOR_Z_BABYSTEPPING"
+         },
+         {
+            "search":"//#define ADVANCED_OK",
+            "replace":"#define ADVANCED_OK"
+         },
+         {
+            "search":"//#define ADVANCED_PAUSE_FEATURE",
+            "replace":"#define ADVANCED_PAUSE_FEATURE"
+         },
+         {
+            "search":"#define X_CURRENT",
+            "replace":"#define X_CURRENT       900  // 42x40 1.8deg 3.9V 1.0A 3.9R 8.9mH"
+         },
+         {
+            "search":"#X_RSENSE",
+            "replace":"#X_RSENSE          0.11 // TMC2209 v1.2  Rs = R110 is 0.11 Ohm"
+         },
+         {
+            "search":"#define Y_CURRENT",
+            "replace":"#define Y_CURRENT       900  // 42x40 1.8deg 3.9V 1.0A 3.9R 8.9mH"
+         },
+         {
+            "search":"#define Y_RSENSE",
+            "replace":"#define Y_RSENSE       0.11 // TMC2209 v1.2  Rs = R110 is 0.11 Ohm"
+         },
+         {
+            "search":"#define Z_CURRENT",
+            "replace":"#define Z_CURRENT       725 // 42x34 1.8deg 4.83V 0.84A 5.75R 9.3mH"
+         },
+         {
+            "search":"#define Z_RSENSE",
+            "replace":"#define Z_RSENSE       0.11  // TMC2209 v1.2  Rs = R110 is 0.11 Ohm"
+         },
+         {
+            "search":"#define E0_CURRENT",
+            "replace":"#define E0_CURRENT       900  // 42x40 1.8deg 3.9V 1.0A 3.9R 8.9mH"
+         },
+         {
+            "search":"#define E0_RSENSE",
+            "replace":"#define E0_RSENSE       0.11  // TMC2209 v1.2  Rs = R110 is 0.11 Ohm"
+         },
+         {
+            "search":"//#define  X_SLAVE_ADDRESS",
+            "replace":"#define  X_SLAVE_ADDRESS 0"
+         },
+         {
+            "search":"//#define  Y_SLAVE_ADDRESS",
+            "replace":"#define  Y_SLAVE_ADDRESS 0"
+         },
+         {
+            "search":"//#define  Z_SLAVE_ADDRESS",
+            "replace":"#define  Z_SLAVE_ADDRESS 0"
+         },
+         {
+            "search":"//#define  E0_SLAVE_ADDRESS",
+            "replace":"#define  E0_SLAVE_ADDRESS 0"
+         },
+         {
+            "search":"//#define SOFTWARE_DRIVER_ENABLE",
+            "replace":"#define SOFTWARE_DRIVER_ENABLE"
+         },
+         {
+            "search":"//#define MONITOR_DRIVER_STATUS",
+            "replace":"#define MONITOR_DRIVER_STATUS"
+         },
+         {
+            "search":"//#define HYBRID_THRESHOLD",
+            "replace":"#define HYBRID_THRESHOLD"
+         },
+         {
+            "search":"//#define TMC_DEBUG",
+            "replace":"#define TMC_DEBUG"
+         },
+         {
+            "search":"#define E0_AUTO_FAN_PIN",
+            "replace":"#define E0_AUTO_FAN_PIN PE5"
+         },
+         {
+            "search":"//#define M115_GEOMETRY_REPORT",
+            "replace":"#define M115_GEOMETRY_REPORT"
+         },
+         {
+            "search":"//#define M114_DETAIL",
+            "replace":"#define M114_DETAIL"
+         },
+         {
+            "search":"//#define REPORT_FAN_CHANGE",
+            "replace":"#define REPORT_FAN_CHANGE"
+         },
+         {
+            "search":"//#define EMERGENCY_PARSER",
+            "replace":"#define EMERGENCY_PARSER"
+         },
+         {
+            "search":"//#define SERIAL_FLOAT_PRECISION",
+            "replace":"#define SERIAL_FLOAT_PRECISION 4"
+         },
+         {
+            "search":"//#define HOST_ACTION_COMMANDS",
+            "replace":"#define HOST_ACTION_COMMANDS"
+         },
+         {
+            "search":"//#define AUTO_REPORT_TEMPERATURES",
+            "replace":"#define AUTO_REPORT_TEMPERATURES"
+         },
+         {
+            "search":"//#define AUTO_REPORT_SD_STATUS",
+            "replace":"#define AUTO_REPORT_SD_STATUS"
+         },
+         {
+            "search":"//#define LONG_FILENAME_HOST_SUPPORT",
+            "replace":"#define LONG_FILENAME_HOST_SUPPORT"
+         },
+         {
+            "search":"//#define LONG_FILENAME_HOST_SUPPORT",
+            "replace":"#define LONG_FILENAME_HOST_SUPPORT"
+         },
+         {
+            "search":"//#define SDCARD_CONNECTION",
+            "replace":"#define SDCARD_CONNECTION ONBOARD"
+         },
+         {
+            "search":"//#define FILAMENT_LOAD_UNLOAD_GCODES",
+            "replace":"#define FILAMENT_LOAD_UNLOAD_GCODES"
+         }
+      ]
+      }
+   ]
+}

@@ -1,0 +1,222 @@
+{
+   "files": [
+      {
+         "filename": "Configuration.h",
+         "changes":[
+            {
+               "search":"#define BAUDRATE",
+               "replace":"#define BAUDRATE 4"
+            },
+            {
+               "search":"#define DEFAULT_LANGUAGE",
+               "replace":"#define DEFAULT_LANGUAGE GERMAN"
+            },
+            {
+               "search":"#define TITLE_BACKGROUND_COLOR",
+               "replace":"#define TITLE_BACKGROUND_COLOR 8"
+            },
+            {
+               "search":"#define BACKGROUND_COLOR",
+               "replace":"#define BACKGROUND_COLOR 1"
+            },
+            {
+               "search":"#define FONT_COLOR",
+               "replace":"#define FONT_COLOR 5"
+            },
+            {
+               "search":"#define BACKGROUND_COLOR",
+               "replace":"#define BACKGROUND_COLOR 12"
+            },
+            {
+               "search":"#define REMINDER_FONT_COLOR",
+               "replace":"#define REMINDER_FONT_COLOR 7"
+            },
+            {
+               "search":"#define VOLUME_REMINDER_FONT_COLOR",
+               "replace":"#define VOLUME_REMINDER_FONT_COLOR 7"
+            },
+            {
+               "search":"#define STATUS_XYZ_BG_COLOR",
+               "replace":"#define STATUS_XYZ_BG_COLOR 12"
+            },
+            {
+               "search":"#define MARLIN_BKCOLOR",
+               "replace":"#define MARLIN_BKCOLOR 12"
+            },
+            {
+               "search":"#define MARLIN_FNCOLOR",
+               "replace":"#define MARLIN_FNCOLOR 8"
+            },
+            {
+               "search":"#define MARLIN_BANNER_TEXT",
+               "replace":"#define MARLIN_BANNER_TEXT \"SKR Pro CR10s\""
+            },
+            {
+               "search":"#define DEFAULT_ST7920_FULLSCREEN_MODE",
+               "replace":"#define DEFAULT_ST7920_FULLSCREEN_MODE 1"
+            },
+            {
+               "search":"#define FAN_NUM",
+               "replace":"#define FAN_NUM 3"
+            },
+            {
+               "search":"#define PREHEAT_HOTEND",
+               "replace":"#define PREHEAT_HOTEND   {180,   240,    240,   170,    220,   250}"
+            },
+            {
+               "search":"#define PREHEAT_BED",
+               "replace":"#define PREHEAT_BED      {70,    70,     110,    50,     50,    90}"
+            },
+            {
+               "search":"#define X_MIN_POS",
+               "replace":"#define X_MIN_POS 4"
+            },
+            {
+               "search":"#define Y_MIN_POS",
+               "replace":"#define Y_MIN_POS 2"
+            },
+            {
+               "search":"#define Z_MIN_POS",
+               "replace":"#define Z_MIN_POS 0"
+            },
+            {
+               "search":"#define X_MAX_POS",
+               "replace":"#define X_MAX_POS 296"
+            },
+            {
+               "search":"#define Y_MAX_POS",
+               "replace":"#define Y_MAX_POS 296"
+            },
+            {
+               "search":"#define Z_MAX_POS",
+               "replace":"#define Z_MAX_POS 400"
+            },
+            {
+               "search":"#define ENABLE_BL_VALUE",
+               "replace":"#define ENABLE_BL_VALUE 3"
+            },
+            {
+               "search":"#define STARTUP_KNOB_LED_COLOR",
+               "replace":"#define STARTUP_KNOB_LED_COLOR 7"
+            },
+            {
+               "search":"#define ACK_NOTIFICATION_STYLE",
+               "replace":"#define ACK_NOTIFICATION_STYLE 2"
+            },
+            {
+               "search":"#define TERMINAL_KEYBOARD_LAYOUT",
+               "replace":"#define TERMINAL_KEYBOARD_LAYOUT 2"
+            },
+            {
+               "search":"#define PS_ON_ACTIVE_HIGH",
+               "replace":"#define PS_ON_ACTIVE_HIGH true"
+            }
+         ]
+      },
+      {
+         "filename": "config.ini",
+         "changes":[
+            {
+               "search":"baudrate:",
+               "replace":"baudrate:5"
+            },
+            {
+               "search":"language:",
+               "replace":"language:1"
+            },
+            {
+               "search":"title_back_color:",
+               "replace":"title_back_color:8"
+            },
+            {
+               "search":"background_color:",
+               "replace":"background_color:1"
+            },
+            {
+               "search":"font_color:",
+               "replace":"font_color:5"
+            },
+            {
+               "search":"reminder_color:",
+               "replace":"reminder_color:7"
+            },
+            {
+               "search":"volume_status_color:",
+               "replace":"volume_status_color:7"
+            },
+            {
+               "search":"status_xyz_bg_color:",
+               "replace":"status_xyz_bg_color:12"
+            },
+            {
+               "search":"invert_axis:",
+               "replace":"invert_axis:X0 Y0 Z0"
+            },
+            {
+               "search":"ack_notification:",
+               "replace":"ack_notification:1"
+            },
+            {
+               "search":"marlin_bg_color:",
+               "replace":"marlin_bg_color:12"
+            },
+            {
+               "search":"marlin_fn_color:",
+               "replace":"marlin_fn_color:8"
+            },
+            {
+               "search":"marlin_show_title:",
+               "replace":"marlin_show_title:1"
+            },
+            {
+               "search":"marlin_fullscreen:",
+               "replace":"marlin_fullscreen:1"
+            },
+            {
+               "search":"marlin_type:",
+               "replace":"marlin_type:1"
+            },
+            {
+               "search":"marlin_title:",
+               "replace":"marlin_title:SKR Pro CR10s"
+            },
+            {
+               "search":"fan_count:",
+               "replace":"fan_count:3"
+            },
+            {
+               "search":"size_min:",
+               "replace":"size_min:X4 Y2 Z0"
+            },
+            {
+               "search":"size_max:",
+               "replace":"size_max:X296 Y296 Z400"
+            },
+            {
+               "search":"preheat_temp1:",
+               "replace":"preheat_temp1:T180 B70"
+            },
+            {
+               "search":"preheat_temp3:",
+               "replace":"preheat_temp3:T240 B110"
+            },
+            {
+               "search":"ps_on:",
+               "replace":"ps_on:1"
+            },
+            {
+               "search":"ps_on_active_high:",
+               "replace":"ps_on_active_high:1"
+            },
+            {
+               "search":"fil_runout:",
+               "replace":"fil_runout:0"
+            },
+            {
+               "search":"knob_led_color:",
+               "replace":"knob_led_color:7"
+            }
+         ]
+      }
+   ]
+}
