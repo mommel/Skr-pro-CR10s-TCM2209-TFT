@@ -1,0 +1,184 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build ALL",
+            "type": "shell",
+            "command": "echo 'ok'",
+            "presentation": {
+                "panel": "shared",
+                "clear": true,
+                "echo": true,
+                "focus": true,
+                "showReuseMessage": false,
+                "revealProblems": "onProblem"
+            },
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "Build Board",
+                "Build Display",
+                "Build WIFI"
+            ],
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Build Board",
+            "type": "shell",
+            "command": "./build_board.sh",
+            "group": "none",
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "dependsOn": "Config Board",
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Build Display",
+            "type": "shell",
+            "command": "./build_display.sh",
+            "group": "none",
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "dependsOn": "Config Display",
+            "dependsOrder": "sequence"
+        },
+        {
+            "label": "Config Board",
+            "type": "npm",
+            "script": "board-config",
+            "group": "none",
+            "dependsOn": "node check",
+            "dependsOrder": "sequence",
+        },
+        {
+            "label": "Config Display",
+            "type": "npm",
+            "script": "display-config",
+            "dependsOn": "node check",
+            "path": " ./",
+            "group": "none"
+        },
+        {
+            "label": "REINIT ALL",
+            "presentation": {
+                "clear": true,
+                "reveal": "silent",
+                "revealProblems": "onProblem",
+                "panel": "shared"
+            },
+            "type": "shell",
+            "command": "./faileover_reinit.sh",
+            "group": "none"
+        },
+        {
+            "label": "Build WIFI",
+            "type": "shell",
+            "command": "build_wifi.sh",
+            "args": [
+                "esp01s_160mhz-2.7.4",
+                "NO",
+                "NO"
+            ],
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "group": "none",
+            "presentation": {
+                "echo": true,
+                "focus": true,
+                "clear": false,
+                "showReuseMessage": false,
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Build WIFI TFT",
+            "type": "shell",
+            "command": "build_wifi_tft.sh",
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "group": "none"
+        },
+        {
+            "label": "Upload WIFI to ESP",
+            "type": "shell",
+            "command": "build_wifi.sh",
+            "args": [
+                "${input:wifiBoard}",
+                "YES",
+                "${input:wifiBoardBuildFS}"
+            ],
+            "group": "none",
+            "problemMatcher": [
+                "$platformio"
+            ],
+            "presentation": {
+                "echo": true,
+                "focus": true,
+                "reveal": "always",
+                "revealProblems": "onProblem",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Check for updates",
+            "presentation": {
+                "reveal": "silent",
+                "revealProblems": "onProblem",
+                "panel": "shared"
+            },
+            "command": "check_for_updates.sh"
+        },
+        {
+            "label": "node check",
+            "presentation": {
+                "clear": true,
+                "reveal": "silent",
+                "revealProblems": "onProblem",
+                "panel": "shared"
+            },
+            "command": "./check_init.sh"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "wifiBoard",
+            "type": "pickString",
+            "description": "Whats your board",
+            "options": [
+                "esp01s_160mhz-2.5.2",
+                "esp01s_160mhz-2.7.4"
+            ],				
+        },
+        {
+          "type": "pickString",
+          "id": "wifiBoardUpload",
+          "description": "Do you want to upload",
+          "options": [
+            "yes",
+            "no"
+          ],
+          "default": "no"
+        },
+        {
+          "type": "pickString",
+          "id": "wifiBoardBuildFS",
+          "description": "Do you want to build a FS on your esp",
+          "options": [
+            "yes",
+            "no"
+          ],
+          "default": "no"
+        }
+      ]
+}

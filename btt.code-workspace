@@ -1,4 +1,31 @@
 {
+	"settings": {
+		"platformio-ide.disablePIOHomeStartup": true,
+		"platformio-ide.activateOnlyOnPlatformIOProject": true,
+		"platformio-ide.autoPreloadEnvTasks": false,
+		"window.zoomLevel": 0.3,
+		"workbench.editor.labelFormat": "medium",
+		"workbench.editor.showIcons": true,
+		"window.title": "BTT Skr Pro v1.2 CR-10",
+		"files.autoSave": "onFocusChange",
+		"git.detectSubmodules": true,
+		"task.autoDetect": "off",
+		"grunt.autoDetect": "off",
+		"jake.autoDetect": "off",
+		"gulp.autoDetect": "off",
+		"npm.autoDetect": "on",
+		"platformio-ide.buildTask": null,
+		"task.saveBeforeRun": "always",
+		"task.problemMatchers.neverPrompt": true,
+		"typescript.tsc.autoDetect": "off"
+	  }
+	  ,
+	"extensions": {	
+		"recommendations": [
+			"platformio.platformio-ide"
+		],
+		"unwantedRecommendations": []
+	},
 	"folders": [
 		{
 			"name": "Generated Firmware",
@@ -7,7 +34,6 @@
 		{
 			"name": "Build",
 			"path": "build"
-
 		},
 		{
 			"name": "----------------------------------------------",
@@ -31,7 +57,7 @@
 		},
 		{
 			"name": "WIFI ESP3D WebUI",
-			"path": "Firmare/Wifi_ESP-1s/ESP3D-WEBUI",
+			"path": "Firmare/Wifi_ESP-1s/ESP3D-WEBUI"
 		},
 		{
 			"name": "----------------------------------------------",
@@ -61,259 +87,5 @@
 			"name": "Information - Relay BTT  v1.2",
 			"path": "Informations/Relay/BTT-Relay-V1.2"
 		}
-	],
-	"launch": {
-		"name": "launch",
-		"configurations": [
-			{
-				"type": "platformio-debug",
-				"request": "launch",
-				"name": "PIO ",
-				"executable": "Firmare/Wifi_ESP-1s/ESP3D/.pioenvs/esp01s_160mhz-2.7.4/firmware.elf",
-				"projectEnvName": "esp01s_160mhz-2.7.4",
-				"toolchainBinDir": ".platformio/packages/toolchain-xtensa@2.40802.200502/bin",
-				"internalConsoleOptions": "openOnSessionStart"
-			},
-			{
-				"command": "npm install",
-				"name": "Run npm install",
-				"request": "launch",
-				"type": "node-terminal"
-			}
-		],
-		"compounds": [
-			{
-				"name": "Compound",
-				"configurations": [{
-					"type": "platformio-debug",
-					"request": "launch",
-					"name": "PIO ",
-					"executable": "Firmare/Wifi_ESP-1s/ESP3D/.pioenvs/esp01s_160mhz-2.7.4/firmware.elf",
-					"projectEnvName": "esp01s_160mhz-2.7.4",
-					"toolchainBinDir": ".platformio/packages/toolchain-xtensa@2.40802.200502/bin",
-					"internalConsoleOptions": "openOnSessionStart"
-					}]
-			}
-		]
-	},
-	"settings": {
-		"window.zoomLevel": 0.3,
-		"workbench.editor.labelFormat": "medium",
-		"workbench.editor.showIcons": true,
-		"window.title": "BTT Skr Pro v1.2 CR-10",
-		"files.autoSave": "onFocusChange",
-		"task.autoDetect": "off",
-		"platformio-ide.customPATH": null,
-		"platformio-ide.activateOnlyOnPlatformIOProject": true,
-		"task.quickOpen.showAll": true,
-		"platformio-ide.autoPreloadEnvTasks": false,
-		"platformio-ide.buildTask": "Build (esp8266)",
-		
-	},
-	"extensions": {	
-		"recommendations": [
-			"platformio.platformio-ide"
-		]
-	},
-	"platformio-ide": {
-
-	},
-	"tasks": {
-		"version": "2.0.0",
-		"tasks": [
-			{
-				"label": "Build ALL",
-				"type": "shell",
-				"command": "echo 'ok'",
-				"presentation": {
-					"reveal": "always",
-					"panel": "dedicated",
-					"clear": true,
-					"echo": false,
-					"focus": true,
-					"showReuseMessage": false,
-					"revealProblems": "always"
-				},
-				"problemMatcher": [
-					"$platformio"
-				],
-				"dependsOn": [
-					"Dist Clean",
-					"Build Board",
-					"Build Display",
-					"Build WIFI"
-				],
-				"dependsOrder": "sequence",
-				"group": {
-					"kind": "build",
-					"isDefault": true
-				}
-			},
-			{
-				"label": "Build Board",
-				"type": "shell",
-				"command": "${workspaceFolder:Build}/build_board.sh",
-				"group": "build",
-				"problemMatcher": [
-					"$platformio"
-				],
-				"presentation": {
-					"echo": false,
-					"focus": false,
-					"clear": true,
-					"showReuseMessage": false,
-					"reveal": "silent",
-					"revealProblems": "always",
-					"panel": "dedicated"
-				},
-				"dependsOn": "Config Board",
-				"dependsOrder": "sequence"
-			},
-			{
-				"label": "Build Display",
-				"type": "shell",
-				"command": "${workspaceFolder:Build}/build_display.sh",
-				"group": "build",
-				"problemMatcher": [
-					"$platformio"
-				],
-				"presentation": {
-					"echo": false,
-					"focus": false,
-					"clear": true,
-					"showReuseMessage": false,
-					"reveal": "always",
-					"revealProblems": "onProblem",
-					"panel": "dedicated"
-				},
-				"dependsOn": "Config Display",
-				"dependsOrder": "sequence"
-			},
-			{
-				"label": "Config Board",
-				"type": "shell",
-				"command": "cd ${workspaceFolder:Build} && npm run board-config",
-				"group": "none",
-				"dependsOn": "node check",
-				"dependsOrder": "sequence"
-			},
-			{
-				"label": "Config Display",
-				"type": "shell",
-				"command": "cd ${workspaceFolder:Build} && npm run display-config",
-				"group": "none"
-			},
-			{
-				"label": "Build WIFI",
-				"type": "shell",
-				"command": "${workspaceFolder:Build}/build_wifi.sh",
-				"args": [
-					"esp01s_160mhz-2.7.4",
-					"NO",
-					"NO"
-				],
-				"group": "build",
-				"problemMatcher": [
-					"$platformio"
-				],
-				"presentation": {
-					"echo": false,
-					"focus": false,
-					"clear": true,
-					"showReuseMessage": false,
-					"reveal": "always",
-					"revealProblems": "onProblem",
-					"panel": "dedicated"
-				}
-			},
-			{
-				"label": "Upload WIFI to ESP",
-				"type": "shell",
-				"command": "${workspaceFolder:Build}/build_wifi.sh",
-				"args": [
-					"${input:wifiBoard}",
-					"YES",
-					"${input:wifiBoardBuildFS}"
-				],
-				"group": "none",
-				"problemMatcher": [
-					"$platformio"
-				],
-				"presentation": {
-					"echo": true,
-					"focus": true,
-					"reveal": "always",
-					"revealProblems": "onProblem",
-					"panel": "shared"
-				}
-			},
-			{
-				"label": "Check for updates",
-				"presentation": {
-					"reveal": "silent",
-					"revealProblems": "onProblem",
-					"panel": "shared"
-				},
-				"command": "${workspaceFolder:Build}/check_for_updates.sh"
-			},
-			{
-				"label": "Dist Clean",
-				"options": {
-					"cwd": "${workspaceFolder:Generated Firmware}"
-				  },
-				"command": "rm -r ${workspaceFolder:Generated Firmware}/*"
-			},
-			{
-				"label": "Build (esp8266)",
-				"type": "process",
-				"command": "echo 'Build all'",
-				"dependsOn": "Build all"
-
-			},
-			{
-				"label": "node check",
-				"presentation": {
-					"clear": true,
-					"reveal": "silent",
-					"revealProblems": "onProblem",
-					"panel": "shared"
-				},
-				"options": {
-					"cwd": "${workspaceFolder:Build}"
-				  },
-				"command": "./check_init.sh"
-			}
-		],
-		"inputs": [
-			{
-				"id": "wifiBoard",
-				"type": "pickString",
-				"description": "Whats your board",
-				"options": [
-					"esp01s_160mhz-2.5.2",
-					"esp01s_160mhz-2.7.4"
-				],				
-			},
-			{
-			  "type": "pickString",
-			  "id": "wifiBoardUpload",
-			  "description": "Do you want to upload",
-			  "options": [
-				"yes",
-				"no"
-			  ],
-			  "default": "no"
-			},
-			{
-			  "type": "pickString",
-			  "id": "wifiBoardBuildFS",
-			  "description": "Do you want to build a FS on your esp",
-			  "options": [
-				"yes",
-				"no"
-			  ],
-			  "default": "no"
-			},
-		  ]
-	}
+	]
 }

@@ -17,15 +17,15 @@
             },
             {
                "search":"#define SERIAL_PORT",
-               "replace":"#define SERIAL_PORT -1"
+               "replace":"#define SERIAL_PORT 1"
             },
             {
                "search":"//#define AERIAL_PORT_2",
-               "replace":"#define SERIAL_PORT_2 1"
+               "replace":"#define SERIAL_PORT_2 -1"
             },
             {
                "search":"#define BAUDRATE",
-               "replace":"#define BAUDRATE 115200"
+               "replace":"#define BAUDRATE 250000"
             },
             {
                "search":"#define MOTHERBOARD",
@@ -76,8 +76,16 @@
                "replace":"#define Y_DRIVER_TYPE  TMC2209"
             },
             {
+               "search":"//#define DETECT_BROKEN_ENDSTOP",
+               "replace":"#define DETECT_BROKEN_ENDSTOP"
+            },
+            {
                "search":"#define Z_DRIVER_TYPE",
                "replace":"#define Z_DRIVER_TYPE  TMC2209"
+            },
+            {
+               "search":"#define E0_DRIVER_TYPE",
+               "replace":"#define E0_DRIVER_TYPE  TMC2209"
             },
             {
                "search":"#define DEFAULT_AXIS_STEPS_PER_UNIT",
@@ -242,6 +250,98 @@
             {
                "search":"//#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER",
                "replace":"#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER"
+            },
+            {
+               "search":"#define X_MIN_ENDSTOP_INVERTING",
+               "replace":"#define X_MIN_ENDSTOP_INVERTING true"
+            },
+            {
+               "search":"#define Y_MIN_ENDSTOP_INVERTING",
+               "replace":"#define Y_MIN_ENDSTOP_INVERTING true"
+            },
+            {
+               "search":"#define Z_MIN_ENDSTOP_INVERTING",
+               "replace":"#define Z_MIN_ENDSTOP_INVERTING true"
+            },
+            {
+               "search":"//#define NUM_M106_FANS",
+               "replace":"//#define NUM_M106_FANS 0"
+            },
+            {
+               "search":"//#define PSU_POWERUP_GCODE",
+               "replace":"#define PSU_POWERUP_GCODE  \"M355 S1\" "
+            },
+            {
+               "search":"//#define PSU_POWEROFF_GCODE",
+               "replace":"#define PSU_POWEROFF_GCODE  \"M355 S0\" "
+            },
+            {
+               "search":"//#define AUTO_POWER_CONTROL",
+               "replace":"#define AUTO_POWER_CONTROL"
+            },
+            {
+               "search":"//#define USE_XMAX_PLUG",
+               "replace":"//#define USE_XMAX_PLUG"
+            },
+            {
+               "search":"//#define USE_YMAX_PLUG",
+               "replace":"//#define USE_YMAX_PLUG"
+            },
+            {
+               "search":"//#define USE_ZMAX_PLUG",
+               "replace":"//#define USE_ZMAX_PLUG"
+            },
+            {
+               "search":"#define X_ENABLE_ON 0",
+               "replace":"#define X_ENABLE_ON 0"
+            },
+            {
+               "search":"#define Y_ENABLE_ON 0",
+               "replace":"#define Y_ENABLE_ON 0"
+            },
+            {
+               "search":"#define Z_ENABLE_ON 0",
+               "replace":"#define Z_ENABLE_ON 0"
+            },
+            {
+               "search":"//#define USE_XMAX_PLUG",
+               "replace":"//#define USE_XMAX_PLUG"
+            },
+            {
+               "search":"//#define USE_YMAX_PLUG",
+               "replace":"//#define USE_YMAX_PLUG"
+            },
+            {
+               "search":"//#define USE_ZMAX_PLUG",
+               "replace":"//#define USE_ZMAX_PLUG"
+            },
+            {
+               "search":"//#define ENDSTOPPULLUP_XMAX",
+               "replace":"//#define ENDSTOPPULLUP_XMAX"
+            },
+            {
+               "search":"//#define ENDSTOPPULLUP_YMAX",
+               "replace":"//#define ENDSTOPPULLUP_YMAX"
+            },
+            {
+               "search":"//#define ENDSTOPPULLUP_ZMAX",
+               "replace":"//#define ENDSTOPPULLUP_ZMAX"
+            },
+            {
+               "search":"//#define ENDSTOPPULLUP_XMIN",
+               "replace":"//#define ENDSTOPPULLUP_XMAX"
+            },
+            {
+               "search":"//#define ENDSTOPPULLUP_YMAX",
+               "replace":"//#define ENDSTOPPULLUP_YMAX"
+            },
+            {
+               "search":"//#define ENDSTOPPULLUP_ZMAX",
+               "replace":"//#define ENDSTOPPULLUP_ZMAX"
+            },
+            {
+               "search":"//#define S_CURVE_ACCELERATION",
+               "replace":"#define S_CURVE_ACCELERATION"
             }
          ]
       },
@@ -249,12 +349,8 @@
          "filename": "Configuration_adv.h",
          "changes":[
          {
-            "search":"#define E0_AUTO_FAN_PIN",
-            "replace":"#define E0_AUTO_FAN_PIN PE5"
-         },
-         {
             "search":"//#define BLTOUCH_SET_5V_MODE",
-            "replace":"//#define BLTOUCH_SET_5V_MODE"
+            "replace":"#define BLTOUCH_SET_5V_MODE"
          },
          {
             "search":"#define Z_STEPPER_ALIGN_ITERATIONS",
@@ -278,7 +374,7 @@
          },
          {
             "search":"//#define SDCARD_SORT_ALPHA",
-            "replace":"#define SDCARD_SORT_ALPHA"
+            "replace":"//#define SDCARD_SORT_ALPHA"
          },
          {
             "search":"#define SDSORT_USES_RAM",
@@ -294,7 +390,11 @@
          },
          {
             "search":"//#define DOGM_SD_PERCENT",
-            "replace":"#define DOGM_SD_PERCENT"
+            "replace":"//#define DOGM_SD_PERCENT"
+         },
+         {
+            "search":"#define MM_PER_ARC_SEGMENT",
+            "replace":"#define MM_PER_ARC_SEGMENT .2"
          },
          {
             "search":"//#define BABYSTEPPING",
@@ -321,8 +421,24 @@
             "replace":"#define ADVANCED_PAUSE_FEATURE"
          },
          {
+            "search":"#define X_CURRENT_HOME",
+            "replace":"#define X_ACURRENT_HOME"
+         },
+         {
+            "search":"#define Y_CURRENT_HOME",
+            "replace":"#define Y_ACURRENT_HOME"
+         },
+         {
+            "search":"#define Z_CURRENT_HOME",
+            "replace":"#define Z_ACURRENT_HOME"
+         },
+         {
             "search":"#define X_CURRENT",
             "replace":"#define X_CURRENT       900  // 42x40 1.8deg 3.9V 1.0A 3.9R 8.9mH"
+         },
+         {
+            "search":"#define X_ACURRENT_HOME",
+            "replace":"#define X_CURRENT_HOME 900"
          },
          {
             "search":"#X_RSENSE",
@@ -341,6 +457,14 @@
             "replace":"#define Z_CURRENT       725 // 42x34 1.8deg 4.83V 0.84A 5.75R 9.3mH"
          },
          {
+            "search":"#define Y_ACURRENT_HOME",
+            "replace":"#define Y_CURRENT_HOME 900 "
+         },
+         {
+            "search":"#define Z_ACURRENT_HOME",
+            "replace":"#define Z_CURRENT_HOME 900"
+         },
+         {
             "search":"#define Z_RSENSE",
             "replace":"#define Z_RSENSE       0.11  // TMC2209 v1.2  Rs = R110 is 0.11 Ohm"
          },
@@ -354,18 +478,18 @@
          },
          {
             "search":"//#define  X_SLAVE_ADDRESS",
-            "replace":"#define  X_SLAVE_ADDRESS 0"
+            "replace":"#define X_SLAVE_ADDRESS 0"
          },
          {
             "search":"//#define  Y_SLAVE_ADDRESS",
-            "replace":"#define  Y_SLAVE_ADDRESS 0"
+            "replace":"#define Y_SLAVE_ADDRESS 0"
          },
          {
             "search":"//#define  Z_SLAVE_ADDRESS",
-            "replace":"#define  Z_SLAVE_ADDRESS 0"
+            "replace":"#define Z_SLAVE_ADDRESS 0"
          },
          {
-            "search":"//#define  E0_SLAVE_ADDRESS",
+            "search":"//#define E0_SLAVE_ADDRESS",
             "replace":"#define  E0_SLAVE_ADDRESS 0"
          },
          {
@@ -377,16 +501,16 @@
             "replace":"#define MONITOR_DRIVER_STATUS"
          },
          {
+            "search":"//#define SQUARE_WAVE_STEPPING",
+            "replace":"#define SQUARE_WAVE_STEPPING"
+         },
+         {
             "search":"//#define HYBRID_THRESHOLD",
             "replace":"#define HYBRID_THRESHOLD"
          },
          {
             "search":"//#define TMC_DEBUG",
             "replace":"#define TMC_DEBUG"
-         },
-         {
-            "search":"#define E0_AUTO_FAN_PIN",
-            "replace":"#define E0_AUTO_FAN_PIN PE5"
          },
          {
             "search":"//#define M115_GEOMETRY_REPORT",
@@ -402,7 +526,7 @@
          },
          {
             "search":"//#define EMERGENCY_PARSER",
-            "replace":"#define EMERGENCY_PARSER"
+            "replace":"//#define EMERGENCY_PARSER"
          },
          {
             "search":"//#define SERIAL_FLOAT_PRECISION",
@@ -418,23 +542,59 @@
          },
          {
             "search":"//#define AUTO_REPORT_SD_STATUS",
-            "replace":"#define AUTO_REPORT_SD_STATUS"
+            "replace":"//#define AUTO_REPORT_SD_STATUS"
          },
          {
             "search":"//#define LONG_FILENAME_HOST_SUPPORT",
-            "replace":"#define LONG_FILENAME_HOST_SUPPORT"
+            "replace":"//#define LONG_FILENAME_HOST_SUPPORT"
          },
          {
             "search":"//#define LONG_FILENAME_HOST_SUPPORT",
-            "replace":"#define LONG_FILENAME_HOST_SUPPORT"
+            "replace":"//#define LONG_FILENAME_HOST_SUPPORT"
          },
          {
             "search":"//#define SDCARD_CONNECTION",
             "replace":"#define SDCARD_CONNECTION ONBOARD"
          },
          {
-            "search":"//#define FILAMENT_LOAD_UNLOAD_GCODES",
-            "replace":"#define FILAMENT_LOAD_UNLOAD_GCODES"
+            "search":"//#define BLTOUCH_DELAY",
+            "replace":"#define BLTOUCH_DELAY 500"
+         },
+         {
+            "search":"//#define CASE_LIGHT_ENABLE",
+            "replace":"//#define CASE_LIGHT_ENABLE"
+         },
+         {
+            "search":"//#define PROBE_OFFSET_WIZARD_XY_POS",
+            "replace":"#define PROBE_OFFSET_WIZARD_XY_POS { X_CENTER, Y_CENTER }"
+         },
+         {
+            "search":"//#define PROBE_OFFSET_WIZARD_START_Z",
+            "replace":"#define PROBE_OFFSET_WIZARD_START_Z -4.0"
+         },
+         {
+            "search":"//#define PROBE_OFFSET_WIZARD",
+            "replace":"#define PROBE_OFFSET_WIZARD"
+         },
+         {
+            "search":"//#define BOOT_MARLIN_LOGO_ANIMATED",
+            "replace":"#define BOOT_MARLIN_LOGO_ANIMATED"
+         },
+         {
+            "search":"//#define ADAPTIVE_STEP_SMOOTHING",
+            "replace":"#define ADAPTIVE_STEP_SMOOTHING"
+         },
+         {
+            "search":"#define HOLD_MULTIPLIER",
+            "replace":"#define HOLD_MULTIPLIER 0.8"
+         },
+         {
+            "search":"//#define CUSTOM_USER_MENUS",
+            "replace":"#define CUSTOM_USER_MENUS"
+         },
+         {
+            "search":"//#define CUSTOM_USER_MENU_TITLE",
+            "replace":"#define CUSTOM_USER_MENU_TITLE \"CR10S Custom Menu\""
          }
       ]
       }

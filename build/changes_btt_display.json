@@ -5,7 +5,7 @@
          "changes":[
             {
                "search":"#define BAUDRATE",
-               "replace":"#define BAUDRATE 4"
+               "replace":"#define BAUDRATE 5"
             },
             {
                "search":"#define DEFAULT_LANGUAGE",
