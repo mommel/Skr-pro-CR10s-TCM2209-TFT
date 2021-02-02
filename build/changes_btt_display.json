@@ -16,10 +16,6 @@
                "replace":"#define TITLE_BACKGROUND_COLOR 8"
             },
             {
-               "search":"#define BACKGROUND_COLOR",
-               "replace":"#define BACKGROUND_COLOR 1"
-            },
-            {
                "search":"#define FONT_COLOR",
                "replace":"#define FONT_COLOR 5"
             },

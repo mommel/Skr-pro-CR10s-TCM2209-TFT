@@ -6,48 +6,122 @@
             "type": "shell",
             "command": "echo 'ok'",
             "presentation": {
-                "panel": "shared",
+                "panel": "dedicated",
                 "clear": true,
                 "echo": true,
                 "focus": true,
                 "showReuseMessage": false,
                 "revealProblems": "onProblem"
             },
-            "problemMatcher": [
-                "$platformio"
-            ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
             "dependsOn": [
+                "Check for updates",
                 "Build Board",
                 "Build Display",
-                "Build WIFI"
+                "Build WIFI",
+                "Build WIFI TFT"
             ],
             "dependsOrder": "sequence"
         },
         {
+            "label": "Build Display",
+            "dependsOn": [
+                "Config Display",
+                "BDisplayF"
+            ],
+            "dependsOrder": "sequence",
+            "command": "Chrome",
+            "windows": {
+                "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+            },
+            "osx": {
+                "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+            },
+            "args": ["../dist/display/sd/build.log.html"]
+        },
+        {
+            "label": "Build WIFI",
+            "dependsOn": [
+                "BWifiF"
+            ],
+            "dependsOrder": "sequence",
+            "command": "Chrome",
+            "windows": {
+                "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+            },
+            "osx": {
+                "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+            },
+            "args": ["../dist/wifi/board/build.log.html"]
+        },
+        {
+            "label": "Build WIFI TFT",
+            "dependsOn": [
+                "BWifiTFTF"
+            ],
+            "dependsOrder": "sequence",
+            "command": "Chrome",
+            "windows": {
+                "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+            },
+            "osx": {
+                "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+            },
+            "args": ["../dist/wifi/tft/build.log.html"]
+        },
+        {
             "label": "Build Board",
+            "dependsOn": [
+                "Config Board",
+                "BBoardF",
+            ],
+            "dependsOrder": "sequence",
+            "command": "Chrome",
+            "windows": {
+                "command": "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe"
+            },
+            "osx": {
+                "command": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+            },
+            "args": ["../dist/board/sd/build.log.html"]
+        },
+        {
+            "label": "BBoardF",
             "type": "shell",
             "command": "./build_board.sh",
             "group": "none",
             "problemMatcher": [
                 "$platformio"
             ],
-            "dependsOn": "Config Board",
-            "dependsOrder": "sequence"
+            "presentation": {
+                "panel": "dedicated",
+                "clear": true,
+                "echo": true,
+                "focus": true,
+                "showReuseMessage": false,
+                "revealProblems": "onProblem"
+            }
         },
         {
-            "label": "Build Display",
+            "label": "BDisplayF",
             "type": "shell",
             "command": "./build_display.sh",
             "group": "none",
             "problemMatcher": [
                 "$platformio"
             ],
-            "dependsOn": "Config Display",
-            "dependsOrder": "sequence"
+            "dependsOrder": "sequence",
+            "presentation": {
+                "panel": "dedicated",
+                "clear": true,
+                "echo": true,
+                "focus": true,
+                "showReuseMessage": false,
+                "revealProblems": "onProblem"
+            }
         },
         {
             "label": "Config Board",
@@ -56,14 +130,41 @@
             "group": "none",
             "dependsOn": "node check",
             "dependsOrder": "sequence",
+            "presentation": {
+                "panel": "dedicated",
+                "clear": true,
+                "echo": true,
+                "focus": true,
+                "showReuseMessage": false,
+                "revealProblems": "onProblem"
+            },
+            "problemMatcher": {
+                "owner": "external",
+                "fileLocation": ["relative", "${workspaceRoot}"],
+                "pattern": {
+                    "regexp": "((([A-Za-z]):\\\\(?:[^\\/:*?\\\"<>|\\r\\n]+\\\\)*)?[^\\/\\s\\(:*?\\\"<>|\\r\\n]*)\\((\\d+)\\):\\s.*(fatal|error|warning|hint)\\s(.*):\\s(.*)",
+                    "file": 1,
+                    "line": 4,
+                    "severity": 5,
+                    "code": 6,
+                    "message": 7
+                }
+            }
         },
         {
             "label": "Config Display",
             "type": "npm",
             "script": "display-config",
+            "group": "none",
             "dependsOn": "node check",
-            "path": " ./",
-            "group": "none"
+            "presentation": {
+                "panel": "dedicated",
+                "clear": true,
+                "echo": true,
+                "focus": true,
+                "showReuseMessage": false,
+                "revealProblems": "onProblem"
+            }
         },
         {
             "label": "REINIT ALL",
@@ -78,14 +179,10 @@
             "group": "none"
         },
         {
-            "label": "Build WIFI",
+            "label": "BWifiF",
             "type": "shell",
-            "command": "build_wifi.sh",
-            "args": [
-                "esp01s_160mhz-2.7.4",
-                "NO",
-                "NO"
-            ],
+            "command": "./build_wifi.sh",
+            "args": ["board"],
             "problemMatcher": [
                 "$platformio"
             ],
@@ -101,46 +198,30 @@
             }
         },
         {
-            "label": "Build WIFI TFT",
+            "label": "BWifiTFTF",
             "type": "shell",
-            "command": "build_wifi_tft.sh",
+            "command": "./build_wifi.sh",
+            "args": ["tft"],
             "problemMatcher": [
                 "$platformio"
             ],
             "group": "none"
         },
         {
-            "label": "Upload WIFI to ESP",
+            "label": "Check for updates",
             "type": "shell",
-            "command": "build_wifi.sh",
-            "args": [
-                "${input:wifiBoard}",
-                "YES",
-                "${input:wifiBoardBuildFS}"
-            ],
+            "command": "./check_for_updates.sh",
             "group": "none",
-            "problemMatcher": [
-                "$platformio"
-            ],
+            "dependsOn": "node check",
             "presentation": {
-                "echo": true,
-                "focus": true,
-                "reveal": "always",
+                "reveal": "silent",
                 "revealProblems": "onProblem",
                 "panel": "shared"
             }
         },
         {
-            "label": "Check for updates",
-            "presentation": {
-                "reveal": "silent",
-                "revealProblems": "onProblem",
-                "panel": "shared"
-            },
-            "command": "check_for_updates.sh"
-        },
-        {
             "label": "node check",
+            "promptOnClose": false,
             "presentation": {
                 "clear": true,
                 "reveal": "silent",
@@ -149,36 +230,5 @@
             },
             "command": "./check_init.sh"
         }
-    ],
-    "inputs": [
-        {
-            "id": "wifiBoard",
-            "type": "pickString",
-            "description": "Whats your board",
-            "options": [
-                "esp01s_160mhz-2.5.2",
-                "esp01s_160mhz-2.7.4"
-            ],				
-        },
-        {
-          "type": "pickString",
-          "id": "wifiBoardUpload",
-          "description": "Do you want to upload",
-          "options": [
-            "yes",
-            "no"
-          ],
-          "default": "no"
-        },
-        {
-          "type": "pickString",
-          "id": "wifiBoardBuildFS",
-          "description": "Do you want to build a FS on your esp",
-          "options": [
-            "yes",
-            "no"
-          ],
-          "default": "no"
-        }
-      ]
+    ]
 }

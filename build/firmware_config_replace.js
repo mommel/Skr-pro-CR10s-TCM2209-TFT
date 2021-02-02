@@ -5,7 +5,8 @@ const fs = require('fs')
 const replaceString = require('replace-string')
 let firmwareFolder
 let rawdata
-console.log('Target ', target)
+console.log('*** Running config replacer ***')
+console.log('===> Target ', target)
 switch (target){
     case 'board':
         firmwareFolder = '../Firmare/Board/Marlin/Marlin_2.0.x-bugfix/Marlin/'
@@ -34,3 +35,4 @@ replacements.files.forEach(function( filereplacements ) {
         }
         })
 })
+console.log('*** Config replacer Done ***')

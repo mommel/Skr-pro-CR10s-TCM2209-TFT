@@ -4,24 +4,30 @@
 [submodule "Firmare/Wifi_ESP-1s/ESP3D"]
 	path = Firmare/Wifi_ESP-1s/ESP3D
 	url = https://github.com/luc-github/ESP3D.git
+	fetchrecursesubmodules = true
 [submodule "Informations/Driver/BIGTREETECH-TMC2209-V1.2"]
 	path = Informations/Driver/BIGTREETECH-TMC2209-V1.2
 	url = https://github.com/bigtreetech/BIGTREETECH-TMC2209-V1.2.git
 [submodule "Firmare/Display/BIGTREETECH-TouchScreenFirmware"]
 	path = Firmare/Display/BIGTREETECH-TouchScreenFirmware
 	url = https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware.git
+	fetchrecursesubmodules = true
 [submodule "Informations/Board/BIGTREETECH-SKR-PRO-V1.1"]
 	path = Informations/Board/BIGTREETECH-SKR-PRO-V1.1
 	url = https://github.com/bigtreetech/BIGTREETECH-SKR-PRO-V1.1.git
+	fetchrecursesubmodules = true
 [submodule "Firmare/Board/Marlin/btt_versions/Configurations"]
 	path = Firmare/Board/Marlin/btt_versions/Configurations
 	url = https://github.com/bigtreetech/Configurations.git
+	fetchrecursesubmodules = true
 [submodule "Firmare/Board/Marlin/btt_versions/Marlin-bugfix"]
 	path = Firmare/Board/Marlin/btt_versions/Marlin-bugfix
 	url = https://github.com/bigtreetech/Marlin.git
+	fetchrecursesubmodules = true
 [submodule "Firmare/Display/Bigtree3DPluginSuit"]
 	path = Firmare/Display/Bigtree3DPluginSuit
 	url = https://github.com/bigtreetech/Bigtree3DPluginSuit.git
+	fetchrecursesubmodules = true
 [submodule "Informations/Display/BIGTREETECH-TouchScreenHardware"]
 	path = Informations/Display/BIGTREETECH-TouchScreenHardware
 	url = https://github.com/bigtreetech/BIGTREETECH-TouchScreenHardware.git
@@ -34,6 +40,8 @@
 [submodule "Firmare/Board/Marlin/Marlin_2.0.x-bugfix"]
 	path = Firmare/Board/Marlin/Marlin_2.0.x-bugfix
 	url = https://github.com/MarlinFirmware/Marlin.git
+	fetchrecursesubmodules = true
 [submodule "Firmare/Board/Marlin/Configurations_2.0x-bugfix"]
 	path = Firmare/Board/Marlin/Configurations_2.0x-bugfix
 	url = https://github.com/MarlinFirmware/Configurations.git
+	fetchrecursesubmodules = true

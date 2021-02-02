@@ -1,4 +1,5 @@
 #!/bin/bash
+cd ..
 echo "**** Script started ==> $(pwd)/ >> ${0} ****"
 rm -rf "./node_modules"
 npm install

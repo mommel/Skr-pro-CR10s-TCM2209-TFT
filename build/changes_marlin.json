@@ -304,24 +304,8 @@
                "replace":"#define Z_ENABLE_ON 0"
             },
             {
-               "search":"//#define USE_XMAX_PLUG",
-               "replace":"//#define USE_XMAX_PLUG"
-            },
-            {
-               "search":"//#define USE_YMAX_PLUG",
-               "replace":"//#define USE_YMAX_PLUG"
-            },
-            {
-               "search":"//#define USE_ZMAX_PLUG",
-               "replace":"//#define USE_ZMAX_PLUG"
-            },
-            {
                "search":"//#define ENDSTOPPULLUP_XMAX",
                "replace":"//#define ENDSTOPPULLUP_XMAX"
-            },
-            {
-               "search":"//#define ENDSTOPPULLUP_YMAX",
-               "replace":"//#define ENDSTOPPULLUP_YMAX"
             },
             {
                "search":"//#define ENDSTOPPULLUP_ZMAX",
@@ -334,10 +318,6 @@
             {
                "search":"//#define ENDSTOPPULLUP_YMAX",
                "replace":"//#define ENDSTOPPULLUP_YMAX"
-            },
-            {
-               "search":"//#define ENDSTOPPULLUP_ZMAX",
-               "replace":"//#define ENDSTOPPULLUP_ZMAX"
             },
             {
                "search":"//#define S_CURVE_ACCELERATION",
@@ -422,47 +402,35 @@
          },
          {
             "search":"#define X_CURRENT_HOME",
-            "replace":"#define X_ACURRENT_HOME"
+            "replace":"#define X_CURRENT_HOME 900"
          },
          {
             "search":"#define Y_CURRENT_HOME",
-            "replace":"#define Y_ACURRENT_HOME"
+            "replace":"#define Y_CURRENT_HOME 900 "
          },
          {
             "search":"#define Z_CURRENT_HOME",
-            "replace":"#define Z_ACURRENT_HOME"
+            "replace":"#define Z_CURRENT_HOME 900"
          },
          {
             "search":"#define X_CURRENT",
             "replace":"#define X_CURRENT       900  // 42x40 1.8deg 3.9V 1.0A 3.9R 8.9mH"
          },
          {
-            "search":"#define X_ACURRENT_HOME",
-            "replace":"#define X_CURRENT_HOME 900"
-         },
-         {
-            "search":"#X_RSENSE",
-            "replace":"#X_RSENSE          0.11 // TMC2209 v1.2  Rs = R110 is 0.11 Ohm"
-         },
-         {
             "search":"#define Y_CURRENT",
             "replace":"#define Y_CURRENT       900  // 42x40 1.8deg 3.9V 1.0A 3.9R 8.9mH"
-         },
-         {
-            "search":"#define Y_RSENSE",
-            "replace":"#define Y_RSENSE       0.11 // TMC2209 v1.2  Rs = R110 is 0.11 Ohm"
          },
          {
             "search":"#define Z_CURRENT",
             "replace":"#define Z_CURRENT       725 // 42x34 1.8deg 4.83V 0.84A 5.75R 9.3mH"
          },
          {
-            "search":"#define Y_ACURRENT_HOME",
-            "replace":"#define Y_CURRENT_HOME 900 "
+            "search":"#define X_RSENSE",
+            "replace":"#define X_RSENSE          0.11 // TMC2209 v1.2  Rs = R110 is 0.11 Ohm"
          },
          {
-            "search":"#define Z_ACURRENT_HOME",
-            "replace":"#define Z_CURRENT_HOME 900"
+            "search":"#define Y_RSENSE",
+            "replace":"#define Y_RSENSE       0.11 // TMC2209 v1.2  Rs = R110 is 0.11 Ohm"
          },
          {
             "search":"#define Z_RSENSE",
@@ -543,10 +511,6 @@
          {
             "search":"//#define AUTO_REPORT_SD_STATUS",
             "replace":"//#define AUTO_REPORT_SD_STATUS"
-         },
-         {
-            "search":"//#define LONG_FILENAME_HOST_SUPPORT",
-            "replace":"//#define LONG_FILENAME_HOST_SUPPORT"
          },
          {
             "search":"//#define LONG_FILENAME_HOST_SUPPORT",

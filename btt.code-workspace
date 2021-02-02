@@ -4,25 +4,45 @@
 		"platformio-ide.activateOnlyOnPlatformIOProject": true,
 		"platformio-ide.autoPreloadEnvTasks": false,
 		"window.zoomLevel": 0.3,
-		"workbench.editor.labelFormat": "medium",
-		"workbench.editor.showIcons": true,
-		"window.title": "BTT Skr Pro v1.2 CR-10",
+		"editor.detectIndentation": true,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"explorer.openEditors.visible": 0,
+		"explorer.compactFolders": true,
+		"workbench.editor.enablePreviewFromQuickOpen": false,
+		"editor.minimap.renderCharacters": false,
+		"editor.minimap.maxColumn": 200,
+		"editor.minimap.showSlider": "always",
+		"workbench.editor.labelFormat": "short",
+		"workbench.editor.showIcons": false,
+		"window.title": "BTT Skr Pro v1.2 CR-10 ${dirty}",
+		"editor.renderWhitespace": "all",
+		"workbench.settings.enableNaturalLanguageSearch": false,
+		"editor.smoothScrolling": true,
+		"editor.cursorBlinking": "phase",
+		"editor.cursorSmoothCaretAnimation": true,
 		"files.autoSave": "onFocusChange",
-		"git.detectSubmodules": true,
+		"files.insertFinalNewline": true,
+		"files.trimTrailingWhitespace": true,
+		//"git.detectSubmodules": true,
 		"task.autoDetect": "off",
 		"grunt.autoDetect": "off",
 		"jake.autoDetect": "off",
 		"gulp.autoDetect": "off",
 		"npm.autoDetect": "on",
-		"platformio-ide.buildTask": null,
+		// "platformio-ide.buildTask": null,
+		"workbench.iconTheme": "file-icons",
+		"workbench.activityBar.visible": true,
 		"task.saveBeforeRun": "always",
 		"task.problemMatchers.neverPrompt": true,
-		"typescript.tsc.autoDetect": "off"
+		"typescript.tsc.autoDetect": "off",
+		"git.detectSubmodulesLimit": 15
 	  }
 	  ,
-	"extensions": {	
+	"extensions": {
 		"recommendations": [
-			"platformio.platformio-ide"
+			"platformio.platformio-ide",
+			"Tyriar.sort-lines"
 		],
 		"unwantedRecommendations": []
 	},
@@ -37,7 +57,7 @@
 		},
 		{
 			"name": "----------------------------------------------",
-			"uri": "localhost:9999/spacer"
+			"uri": "/:2spacer"
 		},
 		{
 			"name": "Board Marlin Firmware",
@@ -61,7 +81,7 @@
 		},
 		{
 			"name": "----------------------------------------------",
-			"uri": "localhost:9998/spacer"
+			"uri": "/:02"
 		},
 		{
 			"name": "Information - Board BTT SKR PRO v1.2",
