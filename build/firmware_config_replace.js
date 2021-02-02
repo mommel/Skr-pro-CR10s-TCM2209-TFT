@@ -26,7 +26,7 @@ replacements.files.forEach(function( filereplacements ) {
     let moddedConfigFile = configFile
     filereplacements.changes.forEach( function( linereplaces ) {
         configFile = moddedConfigFile
-        moddedConfigFile = replaceString( configFile, linereplaces.search, linereplaces.replace + ' // replaced for SKR-PRO CR-10' )
+        moddedConfigFile = replaceString( configFile, linereplaces.search.trim() + ' ' , linereplaces.replace + ' // replaced for SKR-PRO CR-10 ' )
     })
     fs.writeFile( firmwareFolder + filereplacements.filename, moddedConfigFile, err => {
         if (err) {

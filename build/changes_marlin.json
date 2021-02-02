@@ -4,10 +4,6 @@
          "filename": "Configuration.h",
          "changes":[
             {
-               "search":"SERIAL_PORT_2",
-               "replace":"AERIAL_PORT_2"
-            },
-            {
                "search":"#define STRING_CONFIG_H_AUTHOR",
                "replace":"#define STRING_CONFIG_H_AUTHOR \"(Mommel)\""
             },
@@ -20,7 +16,7 @@
                "replace":"#define SERIAL_PORT 1"
             },
             {
-               "search":"//#define AERIAL_PORT_2",
+               "search":"//#define SERIAL_PORT_2",
                "replace":"#define SERIAL_PORT_2 -1"
             },
             {
@@ -92,12 +88,12 @@
                "replace":"#define DEFAULT_AXIS_STEPS_PER_UNIT    {160, 160, 800, 186}   // 1/32 stepping "
             },
             {
-               "search":"#define DEFAULT_MAX_FEEDRATE",
-               "replace":"#define DEFAULT_MAX_FEEDRATE          { 2500, 2500, 100, 25 }"
+               "search":"#define DEFAULT_MAX_ACCELERATION",
+               "replace":"#define DEFAULT_MAX_ACCELERATION          { 2500, 2500, 100, 25 }"
             },
             {
-               "search":"#define DEFAULT_MAX_ACCELERATION",
-               "replace":"#define DEFAULT_MAX_ACCELERATION      { 500, 500, 100, 5000 }"
+               "search":"#define DEFAULT_MAX_FEEDRATE",
+               "replace":"#define DEFAULT_MAX_FEEDRATE      { 500, 500, 100, 5000 }"
             },
             {
                "search":"#define DEFAULT_ACCELERATION",
@@ -401,19 +397,7 @@
             "replace":"#define ADVANCED_PAUSE_FEATURE"
          },
          {
-            "search":"#define X_CURRENT_HOME",
-            "replace":"#define X_CURRENT_HOME 900"
-         },
-         {
-            "search":"#define Y_CURRENT_HOME",
-            "replace":"#define Y_CURRENT_HOME 900 "
-         },
-         {
-            "search":"#define Z_CURRENT_HOME",
-            "replace":"#define Z_CURRENT_HOME 900"
-         },
-         {
-            "search":"#define X_CURRENT",
+            "search":"#define X__CURRENT",
             "replace":"#define X_CURRENT       900  // 42x40 1.8deg 3.9V 1.0A 3.9R 8.9mH"
          },
          {
@@ -423,6 +407,18 @@
          {
             "search":"#define Z_CURRENT",
             "replace":"#define Z_CURRENT       725 // 42x34 1.8deg 4.83V 0.84A 5.75R 9.3mH"
+         },
+         {
+            "search":"#define X_CURRENT_HOME",
+            "replace":"#define X_CURRENT_HOME 900"
+         },
+         {
+            "search":"#define Y_CURRENT_HOME",
+            "replace":"#define Y_CURRENT_HOME 900 "
+         },
+         {
+            "search":"#define Z__CURRENT_HOME  // replaced for SKR-PRO CR-10",
+            "replace":"#define Z__CURRENT_HOME 900"
          },
          {
             "search":"#define X_RSENSE",
