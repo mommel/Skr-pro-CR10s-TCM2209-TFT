@@ -2,6 +2,8 @@
    "files": [
       {
          "filename": "Configuration.h",
+         "marker": " // replaced for SKR-PRO CR-10 ",
+         "keyfollowup": " ",
          "changes":[
             {
                "search":"#define BAUDRATE",
@@ -111,105 +113,107 @@
       },
       {
          "filename": "config.ini",
+         "marker": " # replaced for SKR-PRO CR-10 ",
+         "keyfollowup": ":",
          "changes":[
             {
-               "search":"baudrate:",
+               "search":"baudrate",
                "replace":"baudrate:5"
             },
             {
-               "search":"language:",
+               "search":"language",
                "replace":"language:1"
             },
             {
-               "search":"title_back_color:",
+               "search":"title_back_color",
                "replace":"title_back_color:8"
             },
             {
-               "search":"background_color:",
+               "search":"background_color",
                "replace":"background_color:1"
             },
             {
-               "search":"font_color:",
+               "search":"font_color",
                "replace":"font_color:5"
             },
             {
-               "search":"reminder_color:",
+               "search":"reminder_color",
                "replace":"reminder_color:7"
             },
             {
-               "search":"volume_status_color:",
+               "search":"volume_status_color",
                "replace":"volume_status_color:7"
             },
             {
-               "search":"status_xyz_bg_color:",
+               "search":"status_xyz_bg_color",
                "replace":"status_xyz_bg_color:12"
             },
             {
-               "search":"invert_axis:",
+               "search":"invert_axis",
                "replace":"invert_axis:X0 Y0 Z0"
             },
             {
-               "search":"ack_notification:",
+               "search":"ack_notification",
                "replace":"ack_notification:1"
             },
             {
-               "search":"marlin_bg_color:",
+               "search":"marlin_bg_color",
                "replace":"marlin_bg_color:12"
             },
             {
-               "search":"marlin_fn_color:",
+               "search":"marlin_fn_color",
                "replace":"marlin_fn_color:8"
             },
             {
-               "search":"marlin_show_title:",
+               "search":"marlin_show_title",
                "replace":"marlin_show_title:1"
             },
             {
-               "search":"marlin_fullscreen:",
+               "search":"marlin_fullscreen",
                "replace":"marlin_fullscreen:1"
             },
             {
-               "search":"marlin_type:",
+               "search":"marlin_type",
                "replace":"marlin_type:1"
             },
             {
-               "search":"marlin_title:",
+               "search":"marlin_title",
                "replace":"marlin_title:SKR Pro CR10s"
             },
             {
-               "search":"fan_count:",
+               "search":"fan_count",
                "replace":"fan_count:3"
             },
             {
-               "search":"size_min:",
+               "search":"size_min",
                "replace":"size_min:X4 Y2 Z0"
             },
             {
-               "search":"size_max:",
+               "search":"size_max",
                "replace":"size_max:X296 Y296 Z400"
             },
             {
-               "search":"preheat_temp1:",
+               "search":"preheat_temp1",
                "replace":"preheat_temp1:T180 B70"
             },
             {
-               "search":"preheat_temp3:",
+               "search":"preheat_temp3",
                "replace":"preheat_temp3:T240 B110"
             },
             {
-               "search":"ps_on:",
+               "search":"ps_on",
                "replace":"ps_on:1"
             },
             {
-               "search":"ps_on_active_high:",
+               "search":"ps_on_active_high",
                "replace":"ps_on_active_high:1"
             },
             {
-               "search":"fil_runout:",
+               "search":"fil_runout",
                "replace":"fil_runout:0"
             },
             {
-               "search":"knob_led_color:",
+               "search":"knob_led_color",
                "replace":"knob_led_color:7"
             }
          ]

@@ -1,8 +1,11 @@
 {
 	"settings": {
+		"git.ignoreSubmodules": true,
+		"git.detectSubmodulesLimit": 15,
+		"update.mode": "none",
 		"platformio-ide.disablePIOHomeStartup": true,
-		"platformio-ide.activateOnlyOnPlatformIOProject": true,
-		"platformio-ide.autoPreloadEnvTasks": false,
+		"platformio-ide.activateOnlyOnPlatformIOProject": false,
+		"platformio-ide.autoPreloadEnvTasks": true,
 		"window.zoomLevel": 0.3,
 		"editor.detectIndentation": true,
 		"editor.insertSpaces": true,
@@ -25,20 +28,22 @@
 		"files.insertFinalNewline": true,
 		"files.trimTrailingWhitespace": true,
 		//"git.detectSubmodules": true,
-		"task.autoDetect": "off",
+		//"task.autoDetect": "off",
 		"grunt.autoDetect": "off",
 		"jake.autoDetect": "off",
 		"gulp.autoDetect": "off",
 		"npm.autoDetect": "on",
-		// "platformio-ide.buildTask": null,
+		//"platformio-ide.buildTask": null,
 		"workbench.iconTheme": "file-icons",
 		"workbench.activityBar.visible": true,
 		"task.saveBeforeRun": "always",
 		"task.problemMatchers.neverPrompt": true,
 		"typescript.tsc.autoDetect": "off",
-		"git.detectSubmodulesLimit": 15
-	  }
-	  ,
+		"files.exclude": {
+			"**/.git": true,
+			"**/.DS_Store": true
+		}
+	},
 	"extensions": {
 		"recommendations": [
 			"platformio.platformio-ide",
@@ -61,23 +66,19 @@
 		},
 		{
 			"name": "Board Marlin Firmware",
-			"path": "Firmare/Board/Marlin/Marlin_2.0.x-bugfix"
+			"path": "Firmware/Board/Marlin/Marlin_2.0.x-bugfix"
 		},
 		{
 			"name": "Display BTT TouchScreen Firmware",
-			"path": "Firmare/Display/BIGTREETECH-TouchScreenFirmware"
-		},
-		{
-			"name": "Display BTT TouchScreen Plugin Suit",
-			"path": "Firmare/Display/Bigtree3DPluginSuit"
+			"path": "Firmware/Display/BIGTREETECH/TouchScreenFirmware"
 		},
 		{
 			"name": "WIFI ESP3D Firmware",
-			"path": "Firmare/Wifi_ESP-1s/ESP3D"
+			"path": "Firmware/Wifi_ESP-1s/ESP3D"
 		},
 		{
 			"name": "WIFI ESP3D WebUI",
-			"path": "Firmare/Wifi_ESP-1s/ESP3D-WEBUI"
+			"path": "Firmware/Wifi_ESP-1s/ESP3D-WEBUI"
 		},
 		{
 			"name": "----------------------------------------------",
@@ -89,7 +90,7 @@
 		},
 		{
 			"name": "Information - Marlin Configurations",
-			"path": "Firmare/Board/Marlin/Configurations_2.0x-bugfix"
+			"path": "Firmware/Board/Marlin/Configurations_2.0x-bugfix"
 		},
 		{
 			"name": "Information - Display BTT Hardware",
@@ -106,6 +107,10 @@
 		{
 			"name": "Information - Relay BTT  v1.2",
 			"path": "Informations/Relay/BTT-Relay-V1.2"
+		},
+		{
+			"name": "Display BTT TouchScreen Plugin Suit",
+			"path": "Software/Display/Addon/Bigtree3DPluginSuit"
 		}
 	]
 }

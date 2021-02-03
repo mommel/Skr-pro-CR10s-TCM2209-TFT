@@ -15,7 +15,7 @@ if [ "$2" = "" ]; then
 else
     ENV="$2"
 fi
-FWFOLDER=${ROOTFOLDER}/Firmare/Wifi_ESP-1s/ESP3D/
+FWFOLDER=${ROOTFOLDER}/Firmware/Wifi_ESP-1s/ESP3D/
 CONFFILE=${FWFOLDER}esp3d/config.h
 DISTFOLDER=${ROOTFOLDER}/dist/wifi/${TARGET}/
 CREATEDFW=${DISTFOLDER}firmware.bin

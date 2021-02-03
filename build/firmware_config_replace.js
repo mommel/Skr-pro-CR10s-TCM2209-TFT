@@ -9,11 +9,11 @@ console.log('*** Running config replacer ***')
 console.log('===> Target ', target)
 switch (target){
     case 'board':
-        firmwareFolder = '../Firmare/Board/Marlin/Marlin_2.0.x-bugfix/Marlin/'
+        firmwareFolder = '../Firmware/Board/Marlin/Marlin_2.0.x-bugfix/Marlin/'
         rawdata = fs.readFileSync('./changes_marlin.json')
         break;
     case 'display':
-        firmwareFolder = '../Firmare/Display/BIGTREETECH-TouchScreenFirmware/TFT/src/User/'
+        firmwareFolder = '../Firmware/Display/BIGTREETECH/TouchScreenFirmware/TFT/src/User/'
         rawdata = fs.readFileSync('./changes_btt_display.json')
         break;
     default:
@@ -22,11 +22,14 @@ switch (target){
 const replacements = JSON.parse( rawdata )
 replacements.files.forEach(function( filereplacements ) {
     console.log('Replaceing in ' + filereplacements.filename )
+    console.log('Key follower is ' + filereplacements.keyfollowup )
     let configFile = fs.readFileSync( firmwareFolder + filereplacements.filename, 'utf8' )
     let moddedConfigFile = configFile
+    let keyFollowUp = filereplacements.keyfollowup
+    let changeMarker = filereplacements.marker
     filereplacements.changes.forEach( function( linereplaces ) {
         configFile = moddedConfigFile
-        moddedConfigFile = replaceString( configFile, linereplaces.search.trim() + ' ' , linereplaces.replace + ' // replaced for SKR-PRO CR-10 ' )
+        moddedConfigFile = replaceString( configFile, linereplaces.search.trim() + keyFollowUp , linereplaces.replace + ' ' + changeMarker )
     })
     fs.writeFile( firmwareFolder + filereplacements.filename, moddedConfigFile, err => {
         if (err) {

@@ -5,7 +5,7 @@ cd ..
 ROOTFOLDER=$(pwd)
 BOARD="BIGTREE_SKR_PRO"
 ERR=0
-FWFOLDER=${ROOTFOLDER}/Firmare/Board/Marlin/Marlin_2.0.x-bugfix/
+FWFOLDER=${ROOTFOLDER}/Firmware/Board/Marlin/Marlin_2.0.x-bugfix/
 DISTFOLDER=${ROOTFOLDER}/dist/board/sd/
 CREATEDFW=${DISTFOLDER}firmware.bin
 mkdir -p ${DISTFOLDER}
@@ -93,7 +93,6 @@ if [ $? -eq 0 ]; then
         echo "Something went wrong can't copy firmware.bin"
         ERR=2
     fi
-
 else
     echo "Build failed"
     echo "$?"

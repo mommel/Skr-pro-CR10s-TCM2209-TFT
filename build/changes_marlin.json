@@ -2,6 +2,8 @@
    "files": [
       {
          "filename": "Configuration.h",
+         "marker": " // replaced for SKR-PRO CR-10 ",
+         "keyfollowup": " ",
          "changes":[
             {
                "search":"#define STRING_CONFIG_H_AUTHOR",
@@ -323,6 +325,8 @@
       },
       {
          "filename": "Configuration_adv.h",
+         "marker": " // replaced for SKR-PRO CR-10 ",
+         "keyfollowup": " ",
          "changes":[
          {
             "search":"//#define BLTOUCH_SET_5V_MODE",
