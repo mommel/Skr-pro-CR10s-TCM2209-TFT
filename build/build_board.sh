@@ -8,9 +8,13 @@ ERR=0
 FWFOLDER=${ROOTFOLDER}/Firmware/Board/Marlin/Marlin_2.0.x-bugfix/
 DISTFOLDER=${ROOTFOLDER}/dist/board/sd/
 CREATEDFW=${DISTFOLDER}firmware.bin
-mkdir -p ${DISTFOLDER}
-[ -f ${CREATEDFW} ] && rm ${CREATEDFW}
 BUILDLOGFILE=${DISTFOLDER}build.log.html
+BUILDFOLDER=${ROOTFOLDER}/build/
+mkdir -p ${DISTFOLDER}
+[ -f ${CREATEDFW}.old ] && rm ${CREATEDFW}.old
+[ -f ${CREATEDFW} ] && mv ${CREATEDFW} ${CREATEDFW}.old
+[ -f ${BUILDLOGFILE}.old ] && rm ${BUILDLOGFILE}.old
+[ -f ${BUILDLOGFILE} ] && mv ${BUILDLOGFILE} ${BUILDLOGFILE}.old
 BUILDDATE=$(date '+%d.%m.%Y  %H:%M:%S')
 HTML0='<table class="table"><thead><tr><th scope="col">Key</th><th scope="col">Value</th></tr></thead><tbody>'
 HTML1='\<tr\>\<td\>'
@@ -20,7 +24,7 @@ HTML4='</tbody></table>'
 GITHASH=`git log --pretty=format:"%h %ad" -1`
 
 cd ${FWFOLDER}
-cat ${ROOTFOLDER}/build/loghead > ${BUILDLOGFILE}
+cat ${BUILDFOLDER}/loghead > ${BUILDLOGFILE}
 echo "
   <nav class=\"navbar navbar-expand-lg navbar-light bg-light shadow fixed-top\">
     <div class=\"container\">
