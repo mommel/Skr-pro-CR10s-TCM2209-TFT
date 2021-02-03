@@ -208,18 +208,6 @@
             "group": "none"
         },
         {
-            "label": "Check for updates",
-            "type": "shell",
-            "command": "./check_for_updates.sh",
-            "group": "none",
-            "dependsOn": "node check",
-            "presentation": {
-                "reveal": "silent",
-                "revealProblems": "onProblem",
-                "panel": "shared"
-            }
-        },
-        {
             "label": "node check",
             "promptOnClose": false,
             "presentation": {
