@@ -47,3 +47,6 @@
 [submodule "Software/Biqu-Tool"]
 	path = Software/Biqu-Tool
 	url = https://github.com/bigtreetech/BiQU_Tool.git
+[submodule "Informations/Display/Bigtreetech-OctoBTT"]
+	path = Informations/Display/Bigtreetech-OctoBTT
+	url = https://github.com/bigtreetech/OctoBTT.git
