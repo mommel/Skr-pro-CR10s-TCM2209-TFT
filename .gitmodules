@@ -38,3 +38,6 @@
 [submodule "Firmware/Display/BIGTREETECH/TouchScreenFirmware"]
 	path = Firmware/Display/BIGTREETECH/TouchScreenFirmware
 	url = https://github.com/bigtreetech/BIGTREETECH-TouchScreenFirmware.git
+[submodule "Informations/Expansions"]
+	path = Informations/Expansions
+	url = https://github.com/bigtreetech/BTT-Expansion-module.git
