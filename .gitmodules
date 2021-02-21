@@ -50,3 +50,6 @@
 [submodule "Informations/Display/Bigtreetech-OctoBTT"]
 	path = Informations/Display/Bigtreetech-OctoBTT
 	url = https://github.com/bigtreetech/OctoBTT.git
+[submodule "Software/Probe/BlTouch-Tester"]
+	path = Software/Probe/BlTouch-Tester
+	url = https://github.com/jmcharg/BLTouch-Tester
