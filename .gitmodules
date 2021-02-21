@@ -41,3 +41,6 @@
 [submodule "Informations/Expansions"]
 	path = Informations/Expansions
 	url = https://github.com/bigtreetech/BTT-Expansion-module.git
+[submodule "Software/Biqu-Tool"]
+	path = Software/Biqu-Tool
+	url = https://github.com/bigtreetech/BiQU_Tool.git
