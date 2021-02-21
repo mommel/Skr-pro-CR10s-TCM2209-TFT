@@ -44,3 +44,6 @@
 [submodule "Software/Biqu-Tool"]
 	path = Software/Biqu-Tool
 	url = https://github.com/bigtreetech/BiQU_Tool.git
+[submodule "Informations/UPS"]
+	path = Informations/UPS
+	url = https://github.com/bigtreetech/BIGTREETECH-MINI-UPS-V2.0.git
