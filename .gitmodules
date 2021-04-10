@@ -56,3 +56,12 @@
 [submodule "Software/Display/BigtreeDesignAssistant"]
 	path = Software/Display/BigtreeDesignAssistant
 	url = https://github.com/bigtreetech/BigtreeDesignAssistant.git
+[submodule "Firmware/Board/Bootloader/DFU-Bootloader-all-BTT-Gadgetangle"]
+	path = Firmware/Board/Bootloader/DFU-Bootloader-all-BTT-Gadgetangle
+	url = https://github.com/GadgetAngel/BTT_SKR_13_14_14T_SD-DFU-Bootloader.git
+[submodule "Firmware/Display/BIGTREETECH/OctoBTT/OctoBTT_V2_Gui"]
+	path = Firmware/Display/BIGTREETECH/OctoBTT/OctoBTT_V2_Gui
+	url = https://github.com/bigtreetech/OctoBTT_V2_GUI_Sigma.git
+[submodule "Firmware/Display/BIGTREETECH/OctoBTT/OctoBTT"]
+	path = Firmware/Display/BIGTREETECH/OctoBTT/OctoBTT
+	url = https://github.com/bigtreetech/OctoBTT.git
